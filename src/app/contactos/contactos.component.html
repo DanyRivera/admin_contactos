@@ -1,0 +1,27 @@
+<div class="contenedor">
+    <button type="button" mat-button routerLink="/agregar" class="btn-añadir">Añadir Nuevo</button>
+</div>
+
+<main class="contenedor flex">
+
+    <div *ngFor="let contacto of contactos" >
+
+        <mat-card class="card-contacto">
+
+            <h1>{{contacto.nombre}} {{contacto.apellido}}</h1>
+    
+            <p><span>Correo:</span> {{contacto.correo}}</p>
+    
+            <p><span>Teléfono:</span> {{contacto.telefono}}</p>
+
+    
+            <div class="btns-contacto">
+                <button type="button" class="btn-eliminar" (click)="confirmar(contacto.id)"  mat-button>Eliminar</button>
+                <button type="button" [routerLink]="['/contacto', contacto.id]"  class="btn-actualizar" mat-button>Actualizar</button>
+            </div>
+    
+        </mat-card>
+
+    </div>
+
+</main>

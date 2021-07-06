@@ -1,0 +1,65 @@
+<main class="card-position">
+
+    <mat-card class="card">
+
+        <h1>Nuevo Contacto</h1>
+
+        <form class="form" [formGroup]="form" (ngSubmit)="submit($event)">
+
+            <div>
+                <mat-form-field class="campo">
+                    <mat-label>Nombre:</mat-label>
+                    <input type="text" matInput placeholder="Ej. Luis" formControlName="nombre" name="nombre" value="{{nombre}}">
+                </mat-form-field>
+                <div *ngIf="nombreInput.errors && nombreInput.touched" class="">
+                    <p class="alerta-error" *ngIf="nombreInput.hasError('required')">Campo Obligatorio</p>
+                    <p class="alerta-error" *ngIf="nombreInput.hasError('minlength')">Nombre no válido</p>
+                </div>
+            </div>
+
+            <div>
+                <mat-form-field class="campo">
+                    <mat-label>Apellido:</mat-label>
+                    <input type="text" matInput placeholder="Ej. Rivera" formControlName="apellido" name="apellido" value="{{apellido}}">
+                </mat-form-field>
+                <div *ngIf="apellidoInput.errors && apellidoInput.touched">
+                    <p class="alerta-error" *ngIf="apellidoInput.hasError('required')">Campo Obligatorio</p>
+                    <p class="alerta-error" *ngIf="apellidoInput.hasError('minlength')">Apellido no válido</p>
+                </div>
+            </div>
+
+            <div>
+                <mat-form-field class="campo">
+                    <mat-label>Teléfono:</mat-label>
+                    <input type="tel" matInput placeholder="Ej. 22 23..." formControlName="telefono" name="telefono" value="{{telefono}}">
+                </mat-form-field>
+                <div *ngIf="telefonoInput.errors && telefonoInput.touched">
+                    <p class="alerta-error" *ngIf="telefonoInput.hasError('required')">Campo Obligatorio</p>
+                    <p class="alerta-error" *ngIf="telefonoInput.hasError('minlength')">Teléfono no válido</p>
+                    <p class="alerta-error" *ngIf="telefonoInput.hasError('maxlength')">Teléfono no válido</p>
+                </div>
+            </div>
+
+            <div>
+                <mat-form-field class="campo">
+                    <mat-label>Correo:</mat-label>
+                    <input type="email" matInput placeholder="Ej. correo@correo.com" formControlName="correo" name="correo" value="{{correo}}">
+                </mat-form-field>
+                <div *ngIf="correoInput.errors && correoInput.touched">
+                    <p class="alerta-error" *ngIf="correoInput.hasError('required')">Campo Obligatorio</p>
+                    <p class="alerta-error" *ngIf="correoInput.hasError('pattern')">Correo no válido</p>
+                </div>
+            </div>
+
+            <div class="btns-home">
+                <button type="button" mat-button routerLink="/contactos" class="btn-ver-contactos">Volver</button>
+                <button type="submit" mat-button class="btn-añadir">Actualizar</button>
+            </div>
+
+        </form>
+
+    </mat-card>
+
+
+
+</main>

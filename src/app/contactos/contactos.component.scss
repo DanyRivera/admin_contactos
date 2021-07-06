@@ -1,0 +1,41 @@
+.card-contacto {
+    margin: 5rem 10rem 0 0;
+    text-align: center;
+    width: 100%;
+
+    
+
+    span {
+        font-weight: bold;
+    }
+
+    .btns-contacto {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2.5rem;
+
+        .btn-eliminar {
+            color: #fff;
+            background-color: rgb(194, 11, 11);
+        }
+
+        .btn-actualizar {
+            color: #fff;
+            background-color: rgb(5, 89, 145);
+        }
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+}
+
+.btn-añadir {
+    background-color: rgb(7, 165, 7);
+    color: #fff;
+    border: none;
+    margin-top: 4rem;
+}

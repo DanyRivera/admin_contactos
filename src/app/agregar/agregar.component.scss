@@ -1,0 +1,54 @@
+.card-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+
+    .card {
+        width: 60rem;
+        text-align: center;
+
+        .form {
+            text-align: center;
+
+            .campo {
+                width: 80%;
+            }
+
+        }
+    }
+
+}
+
+.btns-home {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+
+    .btn-añadir {
+        background-color: rgb(7, 165, 7);
+        color: #fff;
+        border: none;
+    }
+
+    .btn-ver-contactos {
+        background-color: rgb(245, 168, 2);
+        color: #fff;
+    }
+
+}
+
+
+.alerta-error {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1.5rem 0;
+    background-color: rgba(230, 45, 45, 0.925);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+
